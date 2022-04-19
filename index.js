@@ -12,8 +12,15 @@ app.get('/api/hello', async (req, res) => {
 
 app.get('/api/merhaba', (req, res) => {
 
-    res.send('Merhaba Dünya')
+    res.send('Merhaba Dünyalı')
 })
+
+app.get('/api/env', async (req, res) => {
+
+    const text = JSON.stringify(process.env)
+
+    res.send(text)
+    })
 
 app.post('/api/name', (req, res) => {
 
